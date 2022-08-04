@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+.page-header {
+  background-image: repeating-linear-gradient(
+      45deg,
+      hsla(207, 0%, 63%, 0.05) -0.5vh,
+      hsla(207, 0%, 63%, 0.05) 0.5vh,
+      transparent 0.5vh,
+      transparent 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 6vh,
+      transparent 12vh,
+      transparent 16vh
+    ),
+    repeating-linear-gradient(
+      0deg,
+      hsla(207, 0%, 63%, 0.05) -0.5vh,
+      hsla(207, 0%, 63%, 0.05) 0.5vh,
+      transparent 0.5vh,
+      transparent 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 6vh,
+      transparent 6vh,
+      transparent 16vh
+    ),
+    repeating-linear-gradient(
+      135deg,
+      hsla(207, 0%, 63%, 0.05) -0.5vh,
+      hsla(207, 0%, 63%, 0.05) 0.5vh,
+      transparent 0.5vh,
+      transparent 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 6vh,
+      transparent 6vh,
+      transparent 16vh
+    ),
+    repeating-linear-gradient(
+      90deg,
+      hsla(207, 0%, 63%, 0.05) -0.5vh,
+      hsla(207, 0%, 63%, 0.05) 0.5vh,
+      transparent 0.5vh,
+      transparent 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 5.5vh,
+      hsla(207, 0%, 63%, 0.05) 6vh,
+      transparent 6vh,
+      transparent 16vh
+    ),
+    linear-gradient(90deg, rgb(17, 17, 17), rgb(66, 66, 66));
+  display: flex;
+  padding: 8vh;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  height: 17vh;
+}
+
+.text_sulfury {
+  color: white;
+  margin-left: 10%;
+  font-size: 10vh;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(75, 75, 75);
+  font-size: 4vh;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3vh;
+}
+
+.nav_link_home {
+  text-decoration: none;
+  color: rgb(204, 207, 0);
+}
+
+.nav_link_reglement,
+.nav_link_equipe,
+.nav_link_join {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.nav_link_reglement2 {
+  text-decoration: none;
+  color: rgb(204, 207, 0);
+}
+
+.nav_link_home2,
+.nav_link_equipe2 {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.nav_link_equipe3 {
+  text-decoration: none;
+  color: rgb(204, 207, 0);
+}
+
+.nav_link_home3,
+.nav_link_reglement3 {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.picto-item {
+  position: relative;
+  /*les .picto-item deviennent référents*/
+  border-radius: 1vh;
+}
+
+/* on génère un élément :after lors du survol et du focus :*/
+
+.picto-item:hover:after,
+.picto-item:focus:after {
+  content: attr(aria-label);
+  /* on affiche aria-label */
+  position: absolute;
+  top: -7.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  /* on centre horizontalement  */
+  z-index: 1;
+  /* pour s'afficher au dessus des éléments en position relative */
+  white-space: nowrap;
+  /* on interdit le retour à la ligne*/
+  padding: 1vh 3vw;
+  background: #413219;
+  color: #fff;
+  border-radius: 1vh;
+  font-size: 2.7vh;
+  cursor: help;
+}
+
+/* on génère un second élément en :before pour la flèche */
+
+[aria-label]:hover:before,
+[aria-label]:focus:before {
+  content: "▼";
+  position: absolute;
+  top: -1em;
+  left: 50%;
+  transform: translateX(-50%);
+  /* on centre horizontalement  */
+  color: #413219;
+  cursor: help;
+}
+
+/* pas de contour durant le :focus */
+[aria-label]:focus {
+  outline: none;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
